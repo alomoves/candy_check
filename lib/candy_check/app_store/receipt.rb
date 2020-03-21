@@ -16,7 +16,7 @@ module CandyCheck
       # @param attributes [Hash]
       def initialize(attributes)
         @attributes = attributes
-        @old_receipt = !attributes.bid.nil?
+        @old_receipt = attributes.key?['bid']
       end
 
       # In most cases a receipt is a valid transaction except when the
